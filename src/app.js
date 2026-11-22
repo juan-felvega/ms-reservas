@@ -4,6 +4,7 @@
 // =====================================================================
 const express = require('express');
 const registrarPeticion = require('./middlewares/registro');
+const reservasRoutes = require('./routes/reservas.routes');
 
 const app = express();
 
@@ -17,6 +18,9 @@ app.use(express.json());
 app.get('/health', (req, res) => {
   res.json({ servicio: 'ms-reservas', estado: 'ok' });
 });
+
+// Rutas del recurso. Todas las URIs de este microservicio empiezan por /reservas
+app.use('/reservas', reservasRoutes);
 
 // Cualquier otra ruta: 404 Not Found
 app.use((req, res) => {
