@@ -5,9 +5,18 @@ Hecho con **Node.js + Express 5** en capas y **MySQL**.
 
 Pareja: Jhoan Esteban Burgos Guerrero · Juan Felipe Vega Reyes · Puerto: **3011**
 
+## Contenido del repositorio
+
+| Carpeta | Qué es |
+|---|---|
+| raíz (`src/`, `db/`, `docs/`) | **ms-reservas**, el microservicio de la pareja (puerto 3011) |
+| `ms-usuarios/` | **ms-usuarios** (versión completa de la docente, puerto 3001): entrega el token con `POST /usuarios/login`. Se incluye para que el repositorio tenga todo lo necesario para correr y desplegar. Ver [ms-usuarios/README.md](ms-usuarios/README.md) |
+
+ms-reservas no le pregunta nada a ms-usuarios: verifica el token con su propio `auth.js` y la **misma `JWT_SECRET`** en los dos `.env`.
+
 ## Cómo ejecutarlo
 
-Requisitos: Node.js 22.9 o superior, MySQL y ms-usuarios corriendo en el puerto 3001.
+Requisitos: Node.js 22.9 o superior, MySQL y ms-usuarios corriendo en el puerto 3001 (carpeta `ms-usuarios/`: `npm install`, su `.env` a partir de `.env.example`, su `db/schema.sql` en `usuarios_db` y `npm run dev`).
 
 1. Crear la base y el usuario, y cargar la tabla (en la consola de MySQL):
    ```
