@@ -67,3 +67,4 @@ La carpeta `frontend/` trae `index.html`, ya configurado para ms-reservas y ms-a
 | Me consulta | Peticiones que me hace |
 |---|---|
 | ms-reservas | `GET /agencias/:id` (validar) · `GET /agencias?ids=…` (componer) |
+exiSle
