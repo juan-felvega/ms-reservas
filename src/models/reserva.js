@@ -38,10 +38,14 @@ function validarReserva(datos) {
   if (!Number.isInteger(datos.personas) || datos.personas <= 0) {
     errores.push('personas es obligatorio y debe ser un entero mayor que 0');
   }
+    if (!Number.isInteger(datos.agencia_id) || datos.agencia_id <= 0) {
+    errores.push('agencia_id es obligatorio y debe ser un entero mayor que 0');
+  }
   return errores;
 }
 
 // Construye una reserva "limpia" solo con los campos permitidos
+
 function construirReserva(datos) {
   return {
     codigo: datos.codigo.trim(),
@@ -49,7 +53,9 @@ function construirReserva(datos) {
     fecha_entrada: datos.fecha_entrada,
     fecha_salida: datos.fecha_salida,
     personas: datos.personas,
+    agencia_id: datos.agencia_id,
   };
+
 }
 
 module.exports = { validarReserva, construirReserva };

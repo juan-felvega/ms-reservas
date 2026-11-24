@@ -13,3 +13,4 @@ INSERT INTO agencias (nombre_agencia, ciudad, estado_convenio) VALUES
   ('Destinos Andinos', 'Bogotá', 'activo'),
   ('Turismo Express', 'Medellín', 'suspendido'),
   ('Caribe Tours', 'Cartagena', 'activo');
+

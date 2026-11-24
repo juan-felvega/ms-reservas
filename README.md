@@ -60,7 +60,8 @@ Requisitos: Node.js 22.9 o superior, MySQL y ms-usuarios corriendo en el puerto 
   "huesped": "Ana Torres",
   "fecha_entrada": "2026-12-01",
   "fecha_salida": "2026-12-05",
-  "personas": 2
+  "personas": 2,
+   "agencia_id": 1
 }
 ```
 
@@ -72,6 +73,7 @@ Requisitos: Node.js 22.9 o superior, MySQL y ms-usuarios corriendo en el puerto 
 | fecha_entrada | fecha AAAA-MM-DD | Obligatoria, fecha válida |
 | fecha_salida | fecha AAAA-MM-DD | Obligatoria, **posterior a fecha_entrada** (si no → 400) |
 | personas | entero | Obligatorio, mayor que 0 |
+| agencia_id | entero | Obligatorio, mayor que 0. Referencia al id de una agencia de ms-agencias |
 
 ### Seguridad
 
